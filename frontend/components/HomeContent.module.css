@@ -1,0 +1,23 @@
+.homeContentBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.playButton {
+  transition: transform 0.3s ease-in-out;
+  color: 'primary';
+}
+
+.playButton:hover {
+  transform: scale(1.1);
+}
+
+.playButton:focus {
+  box-shadow: none;
+}
+
+.icon {
+  width: 170px;
+  height: 170px;
+}

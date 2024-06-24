@@ -1,0 +1,89 @@
+/* Styling for the main container */
+.predictionFormContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+}
+
+/* Styling for the box containing the form */
+.formBox {
+  height: 70%;
+  max-width: 450px;
+  width: 100%;
+  padding: 18px; /* Adjusted from 3 units in MUI theme to pixels */
+  background-color: rgba(0, 17, 32, 0.8);
+  border-radius: 12px;
+}
+
+/* Styling for the input form */
+.form {
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+/* Styling for the FormControl component */
+.formControl {
+  width: 350px;
+  position: relative;
+}
+
+/* Styling for the InputLabel component */
+.inputLabel {
+  position: absolute;
+  left: 15px;
+  top: -5px;
+  color: #5a7085;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+/* TextField specific styles */
+/* ComponentStyles.css */
+
+.textField {
+  line-height: 2;
+  border-radius: 12px;
+  width: 350px;
+  background-color: #002c51;
+  padding: 10px;
+  height: 150px;
+}
+
+.textField input {
+  color: #cccccc;
+  font-size: 4rem;
+}
+
+
+.textField input::-webkit-outer-spin-button,
+.textField input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.textField input[type='number'] {
+  -moz-appearance: textfield;
+}
+
+/* Submit button styles */
+.submitButton {
+  margin-top: 24px;
+  width: 350px;
+  border-radius: 12px;
+  background: linear-gradient(45deg, #5970fd, #f767c6);
+  color: white;
+}
+.submitButton:hover {
+  background: linear-gradient(45deg, #5970fd, #f767c6);
+}
+
+.contentBox {
+  margin-top: 2px;
+  display: flex-start;
+  justify-content: center;
+  align-items: center;
+}

@@ -1,0 +1,39 @@
+.employerContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+}
+
+.employerBox {
+  padding: 10px;
+  background-color: rgba(0, 17, 32, 0.8);
+  border-radius: 12px;
+  margin-top: 80px;
+}
+
+.contentBox {
+  padding: 16px;
+  border-radius: 4px;
+  max-height: 60vh;
+  overflow-y: auto;
+}
+.contentBox::-webkit-scrollbar {
+  width: 5px;
+}
+.contentBox::-webkit-scrollbar-track {
+  background: transparent;
+}
+.contentBox::-webkit-scrollbar-thumb {
+  background: transparent;
+  border-radius: 10px;
+}
+.contentBox::-webkit-scrollbar-thumb:hover {
+  background: #cccccc;
+}
+
+@media screen and (max-width: 768px) {
+  .employerGridItem {
+    margin-top: 20px;
+  }
+}

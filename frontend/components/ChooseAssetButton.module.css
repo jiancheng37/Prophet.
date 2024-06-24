@@ -1,0 +1,28 @@
+.button {
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background-color: rgba(0, 17, 32, 0.8);
+  color: #cccccc;
+  min-width: 80px;
+  width: auto;
+}
+
+.menuItem {
+  justify-content: center;
+  flex-wrap: wrap;
+  display: flex;
+  align-items: center;
+}
+
+.assetBox {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.imageIcon {
+  max-height: 24px;
+  width: auto;
+}

@@ -1,0 +1,12 @@
+.appBar {
+  background-color: transparent;
+  box-shadow: none;
+}
+.toolbarButton {
+  margin-right: 16px;
+}
+.icon {
+  margin-right: 16px;
+  width: 40px;
+  height: 21px;
+}
