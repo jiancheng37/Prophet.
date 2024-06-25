@@ -73,7 +73,7 @@
 }
 
 .contentBox {
-  max-height: 120px;
+  max-height: 100px;
   margin-top: 2px;
   overflow-y: auto;
   display: flex-start;
@@ -84,5 +84,11 @@
 @media (max-width: 900px) {
   .formBox {
     border-radius: 0px;
+  }
+}
+
+@media (max-width: 600px) {
+  .contentBox {
+    max-height: 0px;
   }
 }
