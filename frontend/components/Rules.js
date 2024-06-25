@@ -1,7 +1,7 @@
-import * as React from 'react';
-import Typography from '@mui/material/Typography';
-import { Grid, Box } from '@mui/material';
-import styles from './Rules.module.css';
+import * as React from 'react'
+import Typography from '@mui/material/Typography'
+import { Grid, Box } from '@mui/material'
+import styles from './Rules.module.css'
 
 const Rules = () => {
   return (
@@ -11,7 +11,7 @@ const Rules = () => {
           variant="h2"
           color="primary"
           align="center"
-          sx={{ fontFamily: 'Pacifico, cursive', mt: 3, mb: 2 }}
+          className={styles.headingTypography}
         >
           Rules.
         </Typography>
@@ -20,6 +20,7 @@ const Rules = () => {
             variant="body1"
             color="primary"
             align="left"
+            component="div"
             sx={{ fontFamily: 'Poppins, sans-serif' }}
           >
             <strong>Game Overview:</strong>
@@ -88,7 +89,7 @@ const Rules = () => {
         </Box>
       </Grid>
     </Grid>
-  );
-};
+  )
+}
 
-export default Rules;
+export default Rules

@@ -1,5 +1,5 @@
-import Head from 'next/head';
-import Layout from '@/components/Layout';
+import Head from 'next/head'
+import Layout from '@/components/Layout'
 
 export default function About() {
   return (
@@ -11,5 +11,5 @@ export default function About() {
         </Head>
       </Layout>
     </>
-  );
+  )
 }

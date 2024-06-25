@@ -1,7 +1,7 @@
-import React from 'react';
-import Footer from './Footer';
-import { Box } from '@mui/material';
-import Header from './Header';
+import React from 'react'
+import Footer from './Footer'
+import { Box } from '@mui/material'
+import Header from './Header'
 
 const Layout = ({ children }) => {
   return (
@@ -16,7 +16,7 @@ const Layout = ({ children }) => {
       <Box component="main">{children}</Box>
       <Footer />
     </Box>
-  );
-};
+  )
+}
 
-export default Layout;
+export default Layout

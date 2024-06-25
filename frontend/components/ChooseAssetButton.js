@@ -1,30 +1,31 @@
-import React, { useState } from 'react';
-import { Button, Menu, MenuItem, Typography, Box } from '@mui/material';
-import styles from './ChooseAssetButton.module.css';
+import React, { useState } from 'react'
+import { Button, Menu, MenuItem, Typography, Box } from '@mui/material'
+import styles from './ChooseAssetButton.module.css'
+import { StyleRegistry } from 'styled-jsx'
 
 const items = [
   { id: 'BTC', url: './bitcoin-logo.png', text: 'BTC' },
   { id: 'ETH', url: './ethereum-logo.png', text: 'ETH*' },
   { id: 'SOL', url: './solana-logo.png', text: 'SOL*' },
-];
+]
 
 function ChooseAssetButton() {
-  const [anchorEl, setAnchorEl] = useState(null);
-  const [selectedItem, setSelectedItem] = useState(items[0]);
-  const open = Boolean(anchorEl);
+  const [anchorEl, setAnchorEl] = useState(null)
+  const [selectedItem, setSelectedItem] = useState(items[0])
+  const open = Boolean(anchorEl)
 
   const handleClick = (event) => {
-    setAnchorEl(event.currentTarget);
-  };
+    setAnchorEl(event.currentTarget)
+  }
 
   const handleClose = () => {
-    setAnchorEl(null);
-  };
+    setAnchorEl(null)
+  }
 
   const handleMenuItemClick = (item) => {
-    setSelectedItem(items[0]);
-    handleClose();
-  };
+    setSelectedItem(items[0])
+    handleClose()
+  }
 
   return (
     <>
@@ -48,9 +49,6 @@ function ChooseAssetButton() {
         keepMounted
         open={open}
         onClose={handleClose}
-        PaperProps={{
-          style: { width: 80 },
-        }}
       >
         {items.map((item) => (
           <MenuItem
@@ -58,7 +56,7 @@ function ChooseAssetButton() {
             onClick={() => handleMenuItemClick(item)}
             className={styles.menuItem}
           >
-            <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
+            <Box className={styles.assetBox}>
               <img
                 src={item.url}
                 alt={item.text}
@@ -70,7 +68,7 @@ function ChooseAssetButton() {
         ))}
       </Menu>
     </>
-  );
+  )
 }
 
-export default ChooseAssetButton;
+export default ChooseAssetButton

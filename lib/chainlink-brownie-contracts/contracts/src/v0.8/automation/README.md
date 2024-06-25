@@ -26,7 +26,7 @@ graph LR
 - functions on the root contract have the least gas overhead. Therefore, our most price-sensitive functions live there. We have 3 functions that we consider hot paths. Ideally, these would all live on the root contract to minimize gas overhead.
   - `transmit()` - this is the most important code path
   - `registerUpkeep()`
-  - `addFunds()` 
+  - `addFunds()`
 - functions on the root contract have first-class support from tools like etherscan and tenderly - functions that we (or users) call often to debug should live there
 - etherscan supports executing logic contract functions that are once removed from the root - therefore we give secondary preference to the first logic contract for user and debugging functions
 - functions on logic B through logic Z (as of writing) have no support on etherscan and will essentially be "invisible" to everyone but advanced users - we will try to reserve this space for uncommon interactions that are mostly done progamatically

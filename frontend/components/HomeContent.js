@@ -1,28 +1,18 @@
-import * as React from 'react';
-import Typography from '@mui/material/Typography';
-import { Grid, Button, Link, Box } from '@mui/material';
-import styles from './HomeContent.module.css';
+import * as React from 'react'
+import Typography from '@mui/material/Typography'
+import { Grid, Button, Link, Box } from '@mui/material'
+import styles from './HomeContent.module.css'
 
 const HomeContent = () => {
   return (
     <Grid container justifyContent="flex-end">
-      <Grid item xs={12} md={6} lg={5} className={styles.homeContentBox}>
-        <Typography
-          color="primary"
-          sx={{
-            fontSize: 105,
-            fontFamily: 'Pacifico, cursive',
-            textAlign: 'center',
-          }}
-        >
+      <Grid item xs={12} md={6} lg={6} className={styles.homeContentBox}>
+        <Typography color="primary" className={styles.logoTypography}>
           Prophet.
         </Typography>
-        <Typography
-          color="primary"
-          sx={{ fontSize: 30, textAlign: 'center', padding: 2, marginTop: 3 }}
-        >
+        <Typography color="primary" className={styles.descriptionTypography}>
           Predict cryptocurrency prices to win a collective reward, with the
-          most accurate prediction taking the pot.*
+          most accurate prediction taking the pot .*
         </Typography>
         <Typography
           color="primary"
@@ -41,7 +31,7 @@ const HomeContent = () => {
           <Link href="/play">
             <Button
               sx={{ mr: 8 }}
-              className={styles.playButton}
+              className={styles.button}
               startIcon={
                 <img src="./playimage.png" alt="Play" className={styles.icon} />
               }
@@ -49,7 +39,7 @@ const HomeContent = () => {
           </Link>
           <Link href="/how-to-play">
             <Button
-              className={styles.playButton}
+              className={styles.button}
               startIcon={
                 <img
                   src="./rulesimage.png"
@@ -62,7 +52,7 @@ const HomeContent = () => {
         </Box>
       </Grid>
     </Grid>
-  );
-};
+  )
+}
 
-export default HomeContent;
+export default HomeContent

@@ -1,6 +1,7 @@
 ## Usage
 
 First set the foundry profile to Functions:
+
 ```
 export FOUNDRY_PROFILE=functions
 ```
@@ -8,13 +9,15 @@ export FOUNDRY_PROFILE=functions
 **To run tests use**:
 
 All Functions test files:
+
 ```
 forge test -vvv
 ```
 
 To run a specific file use:
+
 ```
-forge test -vvv --mp src/v0.8/functions/tests/v1_X/[File Name].t.sol 
+forge test -vvv --mp src/v0.8/functions/tests/v1_X/[File Name].t.sol
 ```
 
 **To see coverage**:

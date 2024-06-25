@@ -4,20 +4,56 @@
   align-items: center;
   justify-content: center;
 }
-.playButton {
+
+.logoTypography {
+  font-size: 6vw; /* Scales dynamically with the viewport width */
+  font-family: 'Pacifico', cursive;
+  text-align: center;
+}
+
+.descriptionTypography {
+  margin-top: 10px;
+  padding: 20px;
+  text-align: center;
+  font-size: 30px;
+}
+
+.button {
   transition: transform 0.3s ease-in-out;
   color: 'primary';
 }
 
-.playButton:hover {
+.button:hover {
   transform: scale(1.1);
 }
 
-.playButton:focus {
+.button:focus {
   box-shadow: none;
 }
 
 .icon {
-  width: 170px;
-  height: 170px;
+  width: 10vw;
+  height: 10vw;
+}
+
+@media (max-width: 900px) {
+  .icon {
+    width: 25vw; /* Increase size a bit on smaller screens if needed */
+    height: 25vw;
+  }
+}
+@media (max-width: 900px) {
+  .logoTypography {
+    font-size: 12vw; /* Adjust the size for smaller screens */
+    margin-top: 110px;
+  }
+}
+
+@media (max-width: 900px) {
+  .descriptionTypography {
+    margin-top: 10px;
+    padding: 50px;
+    text-align: center;
+    font-size: 20px;
+  }
 }

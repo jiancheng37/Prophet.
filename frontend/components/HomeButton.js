@@ -1,6 +1,6 @@
-import * as React from 'react';
-import Button from '@mui/material/Button';
-import Link from 'next/link';
+import * as React from 'react'
+import Button from '@mui/material/Button'
+import Link from 'next/link'
 
 const HomeButton = () => {
   return (
@@ -17,7 +17,7 @@ const HomeButton = () => {
         sx={{ mt: 1, mr: 4 }}
       />
     </Link>
-  );
-};
+  )
+}
 
-export default HomeButton;
+export default HomeButton

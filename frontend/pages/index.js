@@ -1,6 +1,6 @@
-import Head from 'next/head';
-import Layout from '@/components/Layout';
-import HomeContent from '@/components/HomeContent';
+import Head from 'next/head'
+import Layout from '@/components/Layout'
+import HomeContent from '@/components/HomeContent'
 
 export default function Home() {
   return (
@@ -11,5 +11,5 @@ export default function Home() {
       </Head>
       <HomeContent />
     </Layout>
-  );
+  )
 }

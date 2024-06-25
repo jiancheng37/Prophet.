@@ -1,6 +1,6 @@
-import Head from 'next/head';
-import PredictionForm from '@/components/PredictionForm';
-import Layout from '@/components/Layout';
+import Head from 'next/head'
+import PredictionForm from '@/components/PredictionForm'
+import Layout from '@/components/Layout'
 
 export default function Play() {
   return (
@@ -11,5 +11,5 @@ export default function Play() {
       </Head>
       <PredictionForm />
     </Layout>
-  );
+  )
 }

@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { ethers } from 'ethers';
+import React, { useState } from 'react'
+import { ethers } from 'ethers'
 import {
   InputLabel,
   FormControl,
@@ -8,16 +8,16 @@ import {
   Box,
   Typography,
   CssBaseline,
-} from '@mui/material';
-import getContract from '@/src/utils/GetContract';
-import { createTheme, ThemeProvider } from '@mui/material/styles';
-import CountdownTimer from './CountdownTimer';
-import { InputAdornment } from '@mui/material';
-import ChooseAssetButton from './ChooseAssetButton';
-import BitcoinPrice from '@/src/utils/BitcoinPrice';
-import GameStateAndTimeLeft from '@/src/utils/GameStateAndTimeLeft';
-import styles from './PredictionForm.module.css';
-import PlayerCounter from './PlayerCounter';
+} from '@mui/material'
+import getContract from '@/src/utils/GetContract'
+import { createTheme, ThemeProvider } from '@mui/material/styles'
+import CountdownTimer from './CountdownTimer'
+import { InputAdornment } from '@mui/material'
+import ChooseAssetButton from './ChooseAssetButton'
+import BitcoinPrice from '@/src/utils/BitcoinPrice'
+import GameStateAndTimeLeft from '@/src/utils/GameStateAndTimeLeft'
+import styles from './PredictionForm.module.css'
+import PlayerCounter from './PlayerCounter'
 
 const theme = createTheme({
   palette: {
@@ -43,26 +43,35 @@ const theme = createTheme({
       },
     },
   },
-});
+})
 
 const PredictionForm = () => {
-  const { gameState } = GameStateAndTimeLeft();
-  const [prediction, setPrediction] = useState('');
+  const { gameState } = GameStateAndTimeLeft()
+  const [prediction, setPrediction] = useState('')
 
   const handleInputChange = (event) => {
-    setPrediction(event.target.value);
-  };
+    setPrediction(event.target.value)
+  }
 
   const handleSubmit = async (event) => {
-    event.preventDefault();
+    event.preventDefault()
     try {
-      const contract = await getContract();
-      const tx = await contract.playerEntry(prediction, {
-        value: ethers.utils.parseEther('0.001'),
-      });
-      await tx.wait();
-    } catch (error) {}
-  };
+      const provider = new ethers.providers.Web3Provider(window.ethereum)
+      const network = await provider.getNetwork()
+
+      if (network.chainId === 11155111) {
+        const contract = await getContract()
+        const tx = await contract.playerEntry(prediction, {
+          value: ethers.utils.parseEther('0.001'),
+        })
+        await tx.wait()
+      } else {
+        alert('Please connect to the Sepolia network.')
+      }
+    } catch (error) {
+      console.error('Transaction failed: ', error)
+    }
+  }
 
   return (
     <ThemeProvider theme={theme}>
@@ -126,7 +135,11 @@ const PredictionForm = () => {
             </Button>
           </form>
           <Box className={styles.contentBox}>
-            <Typography component="div" sx={{ fontSize: '15px' }} color="#cccccc">
+            <Typography
+              component="div"
+              sx={{ fontSize: '15px' }}
+              color="#cccccc"
+            >
               <ul>
                 <li>
                   {gameState === 'LOADING' ? (
@@ -148,14 +161,16 @@ const PredictionForm = () => {
                 </li>
                 <li>Only Sepolia Testnet is supported currently</li>
                 <li>*Only BTC Predictions are supported currently</li>
-                <li>Number of Predictions Made This Game: <PlayerCounter/></li>
+                <li>
+                  Number of Predictions Made This Game: <PlayerCounter />
+                </li>
               </ul>
             </Typography>
           </Box>
         </Box>
       </Box>
     </ThemeProvider>
-  );
-};
+  )
+}
 
-export default PredictionForm;
+export default PredictionForm

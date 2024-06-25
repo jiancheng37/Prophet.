@@ -12,6 +12,13 @@
   margin-top: 80px;
 }
 
+.headingTypography {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-family: 'Pacifico', cursive;
+  font-size: 60px;
+}
+
 .contentBox {
   padding: 16px;
   border-radius: 4px;
@@ -32,8 +39,12 @@
   background: #cccccc;
 }
 
-@media screen and (max-width: 768px) {
-  .employerGridItem {
-    margin-top: 20px;
+@media (max-width: 900px) {
+  .employerBox {
+    margin-top: 60px;
+    border-radius: 0px;
+  }
+  .headingTypography {
+    font-size: 40px;
   }
 }

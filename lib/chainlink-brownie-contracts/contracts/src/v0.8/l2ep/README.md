@@ -24,7 +24,7 @@ to be reused for each indiviudal chain.
 This folder is arranged as follows:
 
 - `/mocks`: used for both Foundry test cases and Hardhat test cases (NOTE:
-Hardhat test cases should be considered deprecated at this point)
+  Hardhat test cases should be considered deprecated at this point)
 
 - `/[version]`: test cases for a specific version of the L2EP contracts
 
@@ -43,14 +43,14 @@ TestFile.t.sol
        |     |
        |     |--- Test Function
        |     |
-       |     |--- ... 
+       |     |--- ...
        |
        |
        |--- Child Contract 2 (inherits base contract)
        |     |
        |     |--- Test Function
        |     |
-       |     |--- ... 
+       |     |--- ...
        |
        |
        ...
@@ -66,7 +66,7 @@ As such, each test file will define separate child contracts, and each
 will inherit from the base contract + define its own set of tests.
 
 The base contract defines a `setUp` function which is automatically called
-exactly once before ***each*** of the tests are run in an inheriting contract.
+exactly once before **_each_** of the tests are run in an inheriting contract.
 The `setUp` function typically deploys a fresh set of test contracts so that
 tests can run independently of each other. Alongside the `setUp` function,
 the base contract can also define variables, constants, events, etc. that

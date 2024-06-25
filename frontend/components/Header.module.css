@@ -3,10 +3,13 @@
   box-shadow: none;
 }
 .toolbarButton {
-  margin-right: 16px;
+  margin-right: 40px;
 }
 .icon {
   margin-right: 16px;
   width: 40px;
   height: 21px;
+}
+.mobileToolbar {
+  justify-content: space-between; /* This will push items to the edges */
 }

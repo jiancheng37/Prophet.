@@ -58,7 +58,6 @@
   font-size: 4rem;
 }
 
-
 .textField input::-webkit-outer-spin-button,
 .textField input::-webkit-inner-spin-button {
   -webkit-appearance: none;
@@ -86,4 +85,10 @@
   display: flex-start;
   justify-content: center;
   align-items: center;
+}
+
+@media (max-width: 900px) {
+  .formBox {
+    border-radius: 0px;
+  }
 }

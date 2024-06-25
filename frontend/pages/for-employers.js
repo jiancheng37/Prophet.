@@ -1,6 +1,6 @@
-import Head from 'next/head';
-import Layout from '@/components/Layout';
-import Employers from '@/components/Employers';
+import Head from 'next/head'
+import Layout from '@/components/Layout'
+import Employers from '@/components/Employers'
 
 export default function About() {
   return (
@@ -11,5 +11,5 @@ export default function About() {
       </Head>
       <Employers />
     </Layout>
-  );
+  )
 }

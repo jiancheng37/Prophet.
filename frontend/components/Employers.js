@@ -1,18 +1,17 @@
-import * as React from 'react';
-import Typography from '@mui/material/Typography';
-import { Grid, Box } from '@mui/material';
-import Link from 'next/link';
-import styles from './Employers.module.css';
+import * as React from 'react'
+import Typography from '@mui/material/Typography'
+import { Grid, Box } from '@mui/material'
+import Link from 'next/link'
+import styles from './Employers.module.css'
 
 const Employers = () => {
   return (
     <Grid container className={styles.employerContainer}>
       <Grid item xs={12} md={8} lg={6} className={styles.employerBox}>
         <Typography
-          variant="h2"
           color="primary"
           align="center"
-          sx={{ fontFamily: 'Pacifico, cursive', mt: 3, mb: 2 }}
+          className={styles.headingTypography}
         >
           For Employers.
         </Typography>
@@ -21,6 +20,7 @@ const Employers = () => {
             variant="body1"
             color="primary"
             align="left"
+            component="div"
             sx={{ fontFamily: 'Poppins, sans-serif' }}
           >
             <strong>A Letter From The Founder:</strong>
@@ -36,26 +36,46 @@ const Employers = () => {
               interaction between Web2 and Web3. I am now even more excited to
               delve deeper into this field of blockchain, especially regarding
               Defi and smart contract security. <br />
-              <br />
-              The code for Prophet. is available on my{' '}
-              <Link href="https://github.com/jiancheng37" target="_blank">
-                GitHub
-              </Link>
-              . I would love to connect on{' '}
-              <Link
-                href="https://linkedin.com/in/lowjc"
-                target="_blank"
-                rel="noopener noreferrer"
-                sx={{ color: 'primary' }}
-              >
-                LinkedIn
-              </Link>{' '}
-              or{' '}
-              <Link href="mailto:lowjiancheng3773@gmail.com" target="_blank">
-                via email
-              </Link>{' '}
-              to discuss opportunities for us to work together to contribute
-              further to the blockchain world!
+              <br />I would love to connect with you to make waves together in
+              the blockchain scene. Hope to get in touch!
+              <ul>
+                <li>
+                  <Link 
+                    href="https://github.com/jiancheng37"
+                    target="_blank" 
+                    style={{ color: 'inherit'}}
+                  >
+                    GitHub
+                  </Link>
+                </li>
+                <li>
+                  <Link 
+                    href="/final-resume.pdf" 
+                    target="_blank" 
+                    style={{ color: 'inherit'}}
+                  >
+                    Resume
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="https://linkedin.com/in/lowjc" 
+                    target="_blank" 
+                    style={{ color: 'inherit'}}
+                  >
+                    LinkedIn
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="mailto:lowjiancheng3773@gmail.com"
+                    target="_blank"
+                    style={{ color: 'inherit'}}
+                  >
+                    Email
+                  </Link>
+                </li>
+              </ul>
             </ul>
 
             <strong>Languages:</strong>
@@ -122,7 +142,7 @@ const Employers = () => {
         </Box>
       </Grid>
     </Grid>
-  );
-};
+  )
+}
 
-export default Employers;
+export default Employers

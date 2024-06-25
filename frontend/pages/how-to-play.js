@@ -1,6 +1,6 @@
-import Head from 'next/head';
-import Layout from '@/components/Layout';
-import Rules from '@/components/Rules';
+import Head from 'next/head'
+import Layout from '@/components/Layout'
+import Rules from '@/components/Rules'
 
 export default function HowToPlay() {
   return (
@@ -11,5 +11,5 @@ export default function HowToPlay() {
       </Head>
       <Rules />
     </Layout>
-  );
+  )
 }
