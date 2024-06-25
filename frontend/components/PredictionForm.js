@@ -46,7 +46,7 @@ const theme = createTheme({
 })
 
 const PredictionForm = () => {
-  const { gameState } = GameStateAndTimeLeft()
+  const { gameState, } = GameStateAndTimeLeft()
   const [prediction, setPrediction] = useState('')
 
   const handleInputChange = (event) => {

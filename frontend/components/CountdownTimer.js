@@ -1,9 +1,9 @@
 import React from 'react'
-import useGameState from '@/src/utils/GameStateAndTimeLeft'
+import GetGameStateAndTimeLeft from '@/src/utils/GameStateAndTimeLeft'
 import { Typography } from '@mui/material'
 
 const CountdownTimer = () => {
-  const { gameState, timeLeft } = useGameState()
+  const { gameState, timeLeft } = GetGameStateAndTimeLeft();
 
   const formatTimeLeft = (seconds) => {
     const hours = Math.floor(seconds / 3600)
