@@ -5,7 +5,7 @@ const provider = new ethers.providers.JsonRpcProvider(
   process.env.NEXT_PUBLIC_INFURIA_SEPOLIA_URL
 )
 const contractABI = require('../contracts/abi.json')
-const contractAddress = '0x7DE49A7C45d783A22813D4904284320ad2B23Fd0'
+const contractAddress = process.env.NEXT_PUBLIC_CONTRACT_ADDRESS
 
 function GameStateAndTimeLeft() {
   const [timeLeft, setTimeLeft] = useState('LOADING')
