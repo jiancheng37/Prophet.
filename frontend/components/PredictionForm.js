@@ -162,7 +162,7 @@ const PredictionForm = () => {
                 <li>Only Sepolia Testnet is supported currently</li>
                 <li>*Only BTC Predictions are supported currently</li>
                 <li>
-                  Number of Predictions Made This Game: <PlayerCounter />
+                  Number of Predictions Made This Round: <PlayerCounter />
                 </li>
               </ul>
             </Typography>
