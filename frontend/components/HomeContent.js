@@ -42,7 +42,7 @@ const HomeContent = () => {
               className={styles.button}
               startIcon={
                 <img
-                  src="./rulesimage.png"
+                  src="./rulesimage.PNG"
                   alt="Rules"
                   className={styles.icon}
                 />
