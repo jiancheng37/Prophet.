@@ -11,5 +11,5 @@
   height: 21px;
 }
 .mobileToolbar {
-  justify-content: space-between; /* This will push items to the edges */
+  justify-content: space-between;
 }

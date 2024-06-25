@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { Button, Menu, MenuItem, Typography } from '@mui/material'
-import Link from 'next/link' // Import Link from Next.js
+import Link from 'next/link'
 
 const items = [
   { id: 'HOME', text: 'HOME', href: '/' },
@@ -11,7 +11,7 @@ const items = [
 
 function MobileMenuButton() {
   const [anchorEl, setAnchorEl] = useState(null)
-  const [selectedItem, setSelectedItem] = useState(null) // Default to the first item
+  const [selectedItem, setSelectedItem] = useState(null)
   const open = Boolean(anchorEl)
 
   const handleClick = (event) => {
@@ -34,9 +34,10 @@ function MobileMenuButton() {
         aria-haspopup="true"
         variant="contained"
         color="secondary"
+        sx={{ mr: '30px' }} 
         onClick={handleClick}
       >
-        <Typography>Menu</Typography>
+        <Typography sx={{ fontSize: '12px' }}>Menu</Typography>
       </Button>
       <Menu
         id="asset-menu"
@@ -44,9 +45,17 @@ function MobileMenuButton() {
         keepMounted
         open={open}
         onClose={handleClose}
+        anchorOrigin={{
+          vertical: 'bottom',
+          horizontal: 'center',
+        }}
+        transformOrigin={{
+          vertical: 'top',
+          horizontal: 'center',
+        }}
         PaperProps={{
           style: {
-            backgroundColor: '#dd7aa6',
+            backgroundColor: 'rgba(221, 122, 166, 0.8)',
           },
         }}
       >
@@ -55,10 +64,10 @@ function MobileMenuButton() {
             key={item.id}
             href={item.href}
             passHref
-            style={{ textDecoration: 'none' }}
+            style={{ textDecoration: 'none', textAlign: 'center' }}
           >
-            <MenuItem onClick={() => handleMenuItemClick(item)}>
-              <Typography style={{ color: 'black', alignItems: 'centre'}}>{item.text}</Typography>
+            <MenuItem sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', width: '100%' }} onClick={() => handleMenuItemClick(item)}>
+              <Typography style={{ color: 'black', fontSize: '12px',}}>{item.text}</Typography>
             </MenuItem>
           </Link>
         ))}

@@ -1,4 +1,3 @@
-/* Styling for the main container */
 .predictionFormContainer {
   display: flex;
   justify-content: center;
@@ -6,17 +5,15 @@
   height: 80vh;
 }
 
-/* Styling for the box containing the form */
 .formBox {
   height: 70%;
   max-width: 450px;
   width: 100%;
-  padding: 18px; /* Adjusted from 3 units in MUI theme to pixels */
+  padding: 18px;
   background-color: rgba(0, 17, 32, 0.8);
   border-radius: 12px;
 }
 
-/* Styling for the input form */
 .form {
   flex-direction: column;
   display: flex;
@@ -25,13 +22,11 @@
   width: 100%;
 }
 
-/* Styling for the FormControl component */
 .formControl {
   width: 350px;
   position: relative;
 }
 
-/* Styling for the InputLabel component */
 .inputLabel {
   position: absolute;
   left: 15px;
@@ -40,9 +35,6 @@
   font-size: 1rem;
   font-weight: bold;
 }
-
-/* TextField specific styles */
-/* ComponentStyles.css */
 
 .textField {
   line-height: 2;
@@ -68,7 +60,6 @@
   -moz-appearance: textfield;
 }
 
-/* Submit button styles */
 .submitButton {
   margin-top: 24px;
   width: 350px;
@@ -76,12 +67,15 @@
   background: linear-gradient(45deg, #5970fd, #f767c6);
   color: white;
 }
+
 .submitButton:hover {
   background: linear-gradient(45deg, #5970fd, #f767c6);
 }
 
 .contentBox {
+  max-height: 120px;
   margin-top: 2px;
+  overflow-y: auto;
   display: flex-start;
   justify-content: center;
   align-items: center;
