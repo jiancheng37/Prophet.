@@ -1,7 +1,7 @@
 import { ethers } from 'ethers'
 
 const contractABI = require('../contracts/abi.json')
-const contractAddress = process.env.NEXT_PUBLIC_CONTRACT_ADDRESS
+const contractAddress = 0x7DE49A7C45d783A22813D4904284320ad2B23Fd0
 
 async function getContract() {
   await window.ethereum.request({ method: 'eth_requestAccounts' })
